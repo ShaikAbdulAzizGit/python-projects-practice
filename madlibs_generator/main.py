@@ -11,10 +11,6 @@ Everyone there started to {verb3} and shout, “What a {adjective3} day!”
 place_holders=[]
 place_holders = re.findall(r"\{(.*?)\}", story_template)
 
-for word in story_template.split(' '):
-    if word.startswith('{'):
-        place_holders.append(word)
-
 user_inputs={}
 for word in place_holders:
     clean_word = re.sub(r"\d+", "", word)
